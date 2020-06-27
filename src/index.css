@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #4c4c4c;
   background: #f8fdf3;
 }
@@ -31,7 +31,7 @@ form button {
 }
 
 h1 {
-  font-family: "Courgette", cursive;
+  font-family: 'Courgette', cursive;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   line-height: 0.65;
   margin-top: 0.5em;
@@ -108,19 +108,19 @@ header input {
 }
 
 li span,
-li input[type="text"] {
+li input[type='text'] {
   color: #707070;
   font-size: 1.3em;
   margin-bottom: 0.3em;
 }
 
-li input[type="text"] {
+li input[type='text'] {
   padding: 0.2em;
   width: 95%;
   border: 1px dotted rgba(0, 0, 0, 0.2);
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   margin-right: 5px;
 }
 
@@ -131,7 +131,7 @@ li label {
 }
 
 li span,
-li input[type="text"]:first-child {
+li input[type='text']:first-child {
   display: block;
 }
 

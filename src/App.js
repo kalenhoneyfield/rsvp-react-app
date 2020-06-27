@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import "./App.css";
-import GuestList from "./GuestList";
+import React, { Component } from 'react';
+import './App.css';
+import GuestList from './GuestList';
 
 class App extends Component {
   state = {
     guests: [
       {
-        name: "Person One",
+        name: 'Person One',
         isConfirmed: false,
       },
       {
-        name: "Person Two",
+        name: 'Person Two',
         isConfirmed: false,
       },
       {
-        name: "Person Three",
+        name: 'Person Three',
         isConfirmed: true,
       },
     ],
@@ -77,7 +77,7 @@ class App extends Component {
               </tr>
             </tbody>
           </table>
-          <GuestList guests={this.state.guests} />
+          <GuestList guests={this.state.guests} toggleConfirmationAt={this.toggleConfirmationAt} />
         </div>
       </div>
     );
