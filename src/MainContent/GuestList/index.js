@@ -25,6 +25,7 @@ const GuestList = (props) => {
               />
             );
           }
+          return null;
         })}
     </ul>
   );
