@@ -9,23 +9,23 @@ const GuestList = (props) => {
     <ul>
       <PendingGuest name={props.pendingGuest} />
       {props.guests
-        // .filter((guest) => !props.isFiltered || guest.isConfirmed)
-        .map((guest, index) => {
-          if (!props.isFiltered || guest.isConfirmed) {
-            return (
-              <Guest
-                key={index}
-                name={guest.name}
-                isConfirmed={guest.isConfirmed}
-                isEditing={guest.isEditing}
-                handleConfirmation={() => props.toggleConfirmationAt(index)}
-                handleToggleEditing={() => props.toggleEditingAt(index)}
-                setName={(text) => props.setNameAt(text, index)}
-                removeGuestAt={() => props.removeGuestAt(index)}
-              />
-            );
-          }
-          return null;
+        .filter((guest) => !props.isFiltered || guest.isConfirmed)
+        .map((guest) => {
+          // if (!props.isFiltered || guest.isConfirmed) {
+          return (
+            <Guest
+              key={guest.id}
+              name={guest.name}
+              isConfirmed={guest.isConfirmed}
+              isEditing={guest.isEditing}
+              handleConfirmation={() => props.toggleConfirmationAt(guest.id)}
+              handleToggleEditing={() => props.toggleEditingAt(guest.id)}
+              setName={(text) => props.setNameAt(text, guest.id)}
+              removeGuestAt={() => props.removeGuestAt(guest.id)}
+            />
+          );
+          // }
+          // return null;
         })}
     </ul>
   );
